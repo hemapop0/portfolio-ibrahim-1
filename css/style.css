@@ -1,0 +1,12 @@
+@import url('./small.css');
+@import url('./medium.css');
+@import url('./large.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+

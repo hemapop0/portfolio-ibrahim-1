@@ -1,0 +1,437 @@
+
+/* =========================
+   1. Global Style
+========================= */
+
+
+:root {
+    --bg-color: #080d1a;
+    --card-color: #101a2e;
+    --primary-color: #00e5ff;
+    --text-color: #f1f5f9;
+    --text-muted: #a7b2c7;
+    --border-color: rgba(0, 229, 255, 0.2);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+#container {
+    width: 100%;
+    max-width: 1600px;
+    /* margin: auto; */
+    padding: 0 6%;
+}
+
+section {
+    width: 100%;
+}
+
+/* =========================
+   2. Navbar
+========================= */
+
+.cont__sec01 {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 25px; */
+}
+
+#Name__Nav {
+    font-size: clamp(20px, 2.3vw, 30px);
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--text-color);
+    white-space: nowrap;
+     animation: slideInLeft 0.9s ease both;
+}
+
+#Name__Nav::first-letter {
+    color: var(--primary-color);
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.nav__link a {
+    position: relative;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav__link a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -7px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav__link a:hover {
+    color: var(--primary-color);
+}
+
+.nav__link a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   3. Hero Section
+========================= */
+
+#cont__sec02 {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+#cont__sec02__Photo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 60px; */
+    /* padding: 70px 0; */
+}
+
+.intro {
+    flex: 1;
+    max-width: 650px;
+    font-size: clamp(32px, 4.5vw, 60px);
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -1px;
+    animation: floatPhoto 4s ease-in-out infinite;
+}
+
+.intro::first-line {
+    color: var(--primary-color);
+}
+
+#photo {
+    width: clamp(230px, 30vw, 370px);
+    /* aspect-ratio: 1 / 1; */
+    /* height: auto; */
+    object-fit: cover;
+    object-position: center;
+    /* border-radius: 50%; */
+    border: 3px solid var(--primary-color);
+    padding: 7px;
+    background: var(--card-color);
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, 0.2),
+        0 0 60px rgba(0, 229, 255, 0.12);
+    animation: floatPhoto 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+#photo:hover {
+    box-shadow:
+        0 0 30px rgba(0, 229, 255, 0.5),
+        0 0 90px rgba(0, 229, 255, 0.2);
+    transform: scale(1.03);
+}
+
+/* =========================
+   4. About Me
+========================= */
+
+#cont__sec03 {
+    padding: 45px 0;
+}
+
+#cont__sec03__AboutMe {
+    position: relative;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 229, 255, 0.06),
+            rgba(16, 26, 46, 0.8)
+        );
+    /* overflow: hidden; */
+}
+
+#cont__sec03__AboutMe::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.aboutme {
+    color: var(--text-muted);
+    font-size: clamp(16px, 1.5vw, 20px);
+    line-height: 2;
+}
+
+/* =========================
+   5. Shared Section Titles
+========================= */
+
+.section__title {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 40px;
+    color: var(--text-color);
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.section__title::after {
+    content: "";
+    display: block;
+    width: 55%;
+    height: 3px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    background: var(--primary-color);
+    box-shadow: 0 0 12px var(--primary-color);
+    
+}
+
+.cont__sec05__card img{
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    object-position: center ;
+    border-radius: 10px;
+}
+
+/* =========================
+   6. Skills
+========================= */
+
+#cont__sec04 {
+    padding: 65px 0;
+    margin-top: 30px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#cont__sec04__Skills {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.skills {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+}
+
+/* =========================
+   7. My Projects
+========================= */
+
+#cont__sec05 {
+    padding: 80px 0;
+    margin-top: 20px;
+}
+
+#cont__sec05__Projects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+#cont__sec05__Projects > .section__title {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.cont__sec05__card {
+    position: relative;
+    min-height: 220px;
+    padding: 30px 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    background: var(--card-color);
+    /* overflow: hidden; */
+    isolation: isolate;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Glowing background */
+
+.cont__sec05__card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    right: -100px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    filter: blur(65px);
+    opacity: 0.12;
+    transition: 0.4s ease;
+}
+
+.cont__sec05__card:hover {
+    transform: scale(1.03);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(0, 229, 255, 0.1);
+}
+
+.cont__sec05__card:hover::before {
+    opacity: 0.45;
+}
+
+.cont__sec05__card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 23px;
+    text-align: center;
+}
+
+
+
+/* =========================
+   8. Contact
+========================= */
+
+#cont__sec06 {
+    padding: 70px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+#cont__sec06__Contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--card-color);
+}
+
+#cont__sec06__Contact .section__title {
+    margin-bottom: 15px;
+}
+
+#cont__sec06__Contact input,
+#cont__sec06__Contact textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid rgba(167, 178, 199, 0.2);
+    border-radius: 10px;
+    outline: none;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+#cont__sec06__Contact input:focus,
+#cont__sec06__Contact textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+}
+
+#cont__sec06__Contact textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#cont__sec06__Contact input::placeholder,
+#cont__sec06__Contact textarea::placeholder {
+    color: #77849b;
+}
+
+#Submit__Contact {
+    padding: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: #080d1a;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#Submit__Contact:hover {
+    background: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+    transform: scale(1.03);
+
+}
+
+/* =========================
+   9. Animations
+========================= */
+
+@keyframes floatPhoto {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   10. Tablet
+========================= */
+
+
+
+/* =========================
+   11. Mobile
+========================= */
+
+
+

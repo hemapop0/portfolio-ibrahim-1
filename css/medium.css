@@ -1,0 +1,23 @@
+@media (max-width: 900px) {
+    #container {
+        padding: 0 4%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav__link {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #cont__sec02__Photo {
+        gap: 30px;
+    }
+
+    #cont__sec05__Projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

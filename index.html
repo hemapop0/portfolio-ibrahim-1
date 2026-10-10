@@ -1,16 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio WebSite</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    
-
-
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <section id="cont__sec01" class="cont__sec01">
+        <nav id="cont__sec01__Navbar" class="cont__sec01__art">
+          <h1 id="Name__Nav">ENG. IBRAHIM</h1>
+          <div class="nav__link">
+            <a href="#cont__sec03">AboutMe</a>
+            <a href="#cont__sec04">Skills</a>
+            <a href="#cont__sec05">Projects</a>
+            <a href="#cont__sec06">Contact</a>
+          </div>
+        </nav>
+      </section>
+      <section id="cont__sec02" class="cont__sec02">
+        <article id="cont__sec02__Photo" class="cont__sec02__art">
+          <p class="intro">Hi, I am ENG IBRAHIM MOHAMED</p>
+          <img id="photo" src="images/My photo.jpg" alt="MY-Photo" />
+        </article>
+      </section>
+      <section id="cont__sec03" class="cont__sec03">
+        <article id="cont__sec03__AboutMe" class="cont__sec03__art">
+          <p class="aboutme">
+            I'm Ibrahim Mohamed, a Cyber Security and Software Engineering
+            student passionate about building secure and modern applications. I
+            enjoy programming, web development, Linux, and cybersecurity, and
+            I’m always working on new projects to improve my skills and gain
+            practical experience.
+          </p>
+        </article>
+      </section>
+      <section id="cont__sec04" class="cont__sec04">
+        <article id="cont__sec04__Skills" class="cont__sec04__art">
+          <h2 class="section__title">SKILLS</h2>
+          <p class="skills">
+            I have a strong foundation in programming languages ​​such as Java
+            and C++. I am proficient in web development tools and frameworks,
+            such as HTML, CSS, and JavaScript. I have experience with Linux and
+            have worked on various projects, including Wazuh and Splunk, in the
+            field of cybersecurity.
+          </p>
+        </article>
+      </section>
+      <section id="cont__sec05" class="cont__sec05">
+        <article id="cont__sec05__Projects" class="cont__sec05__art">
+          <h2 class="section__title">MY PROJECTS</h2>
+          <div class="cont__sec05__card">
+            <h3>Project 1</h3>
+            <img src="/images/ph1.png" alt="This is my project 1">
+          </div>
+          <div class="cont__sec05__card">
+            <h3>Project 2</h3>
+            <img src="/images/ph2.png" alt="This is my project 2">
+          </div>
+          <div class="cont__sec05__card">
+            <h3>Project 3</h3>
+            <img src="/images/ph3.png" alt="This is my project 3">
+          </div>
+        </article>
+      </section>
+      <section id="cont__sec06" class="cont__sec06">
+        <article id="cont__sec06__Contact" class="cont__sec06__art">
+          <h3 class="section__title">CONTACT ME</h3>
+          <input type="text" id="Name__Contact" placeholder="Enter Your Name" />
+          <input
+            type="email"
+            id="Email__Contact"
+            placeholder="Enter Your Email"
+          />
+          <textarea
+            id="Message__Contact"
+            placeholder="Enter Your Message"
+          ></textarea>
+          <button id="Submit__Contact">Send Message</button>
+        </article>
+      </section>
+    </div>
 
     <script src="javaScript/script.js"></script>
-</body>
+  </body>
 </html>
